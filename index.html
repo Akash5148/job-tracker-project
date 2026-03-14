@@ -20,20 +20,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="font-[Roboto] [#F8FAFC]  ">
+<body class="font-[Roboto] bg-[#ffffff]  ">
     <header class=" max-w-[77%] mx-auto container my-[60px]">
-        <h1 class="sm:text-3xl font-extrabold md:text-5xl font-bold  mb-[20px]">Job Application Tracker</h1>
-        <div class="  sm: grid grid-cols-1 md:grid-cols-3 gap-[16px]">
-            <div class="p-[20px] rounded-[8px] shadow-md bg-[#FFFFFF] border-t border-gray-300  ">
-                <p class="font-medium text-[14px] mb-[8px]">Total</p>
+        <h1 class="sm:text-4xl font-extrabold md:text-5xl   mb-5">Job Application Tracker</h1>
+        <div class="  sm: grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-5 rounded-lg shadow-md bg-[#FFFFFF] border-t border-gray-300  ">
+                <p class="font-medium text-[14px] mb-2">Total</p>
                 <p id="totalCount" class="text-[25px] font-bold ">0</p>
             </div>
-            <div class="p-[20px] rounded-[8px] shadow-md bg-[#FFFFFF] border-t border-gray-300 ">
-                <p class="font-medium text-[14px] mb-[8px]">Interview</p>
+            <div class="p-5 rounded-lg shadow-md bg-[#FFFFFF] border-t border-gray-300 ">
+                <p class="font-medium text-[14px] mb-2">Interview</p>
                 <p id="InterviewCount" class="text-[25px] font-bold text-green-500 ">0</p>
             </div>
-            <div class="p-[20px] rounded-[8px] shadow-md bg-[#FFFFFF] border-t border-gray-300 ">
-                <p class="font-medium text-[14px] mb-[8px]">Rejected</p>
+            <div class="p-5 rounded-lg shadow-md bg-[#FFFFFF] border-t border-gray-300 ">
+                <p class="font-medium text-[14px] mb-2">Rejected</p>
                 <p id="RejectedCount" class="text-[25px] font-bold text-red-500">0</p>
             </div>
         </div>
@@ -42,7 +42,7 @@
     <main class=" max-w-[77%] mx-auto container my-[60px]">
         <div class="flex justify-between gap-2 ">
             <div class="avail">
-                <h1 class="sm:text-2xl  font-medium md:mb-[30px] font-bold text-3xl">Available Jobs</h1>
+                <h1 class="sm:text-2xl   md:mb-[30px] font-bold text-3xl">Available Jobs</h1>
             </div>
 
             <div class="jobs"></div>
@@ -50,14 +50,14 @@
         </div>
 
 
-        <div class=" flex flex-col md:flex-row gap-[8px] mb-[16px] mt-[24px]  ">
+        <div class=" flex flex-col md:flex-row gap-2 mb-4 mt-6  ">
             <button onclick="toggleStyle('All-filter-btn')" id="All-filter-btn" class=" px-10 py-2 bg-[#3B82F6] text-white font-semibold 
-                rounded-[4px] shadow-md ">All</button>
+                rounded-sm shadow-md ">All</button>
             <button onclick="toggleStyle('Interview-filter-btn')" id="Interview-filter-btn"
-                    class="font-semibold rounded-[4px] shadow-md border border-gray-200 px-10 py-2">Interview</button>
+                    class="font-semibold rounded-sm shadow-md border border-gray-200 px-10 py-2">Interview</button>
            
             <button onclick="toggleStyle('Rejected-filter-btn') " id="Rejected-filter-btn"
-                    class="font-semibold px-10 py-2 rounded-[4px]  shadow-md border border-gray-200  ">Rejected</button>
+                    class="font-semibold px-10 py-2 rounded-sm  shadow-md border border-gray-200  ">Rejected</button>
            
 
 
@@ -81,35 +81,35 @@
         <section id="allCards">
             <!-- 1st card -->
             <div
-                class="card flex justify-between rounded-[8px] overflow-hidden
-                shadow-lg my-[40px]  border border-gray-200  ">
+                class="card flex justify-between rounded-lg overflow-hidden
+                shadow-lg my-10  border border-gray-200  relative ">
                 <!-- 1st part  -->
-                <div class="relative bg-[#FFFFFF]  space-y-5 px-[16px]  w-[100%] ">
-                    <h2 class=" text-[18px] font-bold md: text-[24px] font-bold mt-[24px] Mobile">Mobile First Corp</h2>
+                <div class=" bg-[#FFFFFF]  space-y-5 px-4  w-full ">
+                    <h2 class=" text-[18px]  md: text-6xl font-bold mt-6 Mobile">Mobile First Corp</h2>
                     <p class="text-[#64748B] React ">React Native Developer</p>
                     <p class=" sm: text-[12px] md:text-[#64748B] Remote ">Remote
                         •
                         Full-time
                         •
                         $130,000 - $175,000</p>
-                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-[12px] uppercase
-                    py-[8px] w-[120px] text-center rounded-[4px]">Not Applied</p>
+                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-3 uppercase
+                    py-2 w-[120px] text-center rounded-sm">Not Applied</p>
                     <p class=" notes text-[13px]  md:text-[16px]">Build cross-platform mobile applications
                         using React Native. Work on products
                         used by millions of users worldwide.</p>
 
-                    <div class="sm:m-1 py-5 md:m-8 flex flex-row gap-3 w-[100%] ">
+                    <div class="sm:m-1 py-5 md:m-8 flex flex-row gap-3 w-full ">
                         <button
-                            class=" interview-btn px-4 py-2 rounded-[8px] border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
+                            class=" interview-btn px-4 py-2 rounded-lg border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
                         <button
-                            class=" rejected-btn px-4 py-2 rounded-[8px] border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
+                            class=" rejected-btn px-4 py-2 rounded-lg border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
                     </div>
 
 
                 </div>
                 <!-- 2nd part -->
 
-                <div class=" absolute right-[28px] top-[760px] md:static mt-[50px] mr-[20px]"><span class=" border border-gray-400  rounded-full p-[6px]"><i
+                <div class="absolute top-5 right-1 z-20 "><span class=" border border-gray-400  rounded-full p-1.5"><i
                             class="fa-solid fa-trash-can delete-btn cursor-pointer"></i></span></div>
 
             </div>
@@ -118,10 +118,10 @@
             <!-- 2nd card -->
 
             <div
-                class="card flex justify-between rounded-[8px] shadow-lg my-[40px]  border border-gray-200 overflow-hidden ">
+                class="card flex justify-between rounded-lg shadow-lg my-10  border border-gray-200 overflow-hidden  relative ">
                 <!-- 1st part  -->
-                <div class=" relative bg-[#FFFFFF]  space-y-5 px-[16px] w-[100%]">
-                    <h2 class="text-[18px] font-bold md:text-[24px] font-bold mt-[24px] Mobile">WebFlow Agency</h2>
+                <div class=" bg-[#FFFFFF]  space-y-5 px-4 w-full">
+                    <h2 class="text-[18px]  md:text-[24px] font-bold mt-6 Mobile">WebFlow Agency</h2>
                     <p class="text-[#64748B] React">Web Designer & Developer</p>
                     <p class="sm: text-[12px] md:text-[#64748B] Remote ">Los Angeles, CA
                         •
@@ -129,99 +129,99 @@
                         •
                         $80,000 - $120,000
                     </p>
-                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-[12px] uppercase
-                    py-[8px] w-[120px] text-center rounded-[4px]">Not Applied</p>
+                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-3 uppercase
+                    py-2 w-[120px] text-center rounded-sm">Not Applied</p>
                     <p class="notes text-[13px]  md:text-[16px]">Create stunning web experiences for high-profile clients. Must have portfolio and
                         experience with modern web design trends.</p>
 
                     <div class="sm:m-1 py-5 md:m-8 flex flex-row gap-3">
                         <button
-                            class="interview-btn px-4 py-2 rounded-[8px] border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
+                            class="interview-btn px-4 py-2 rounded-lg border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
                         <button
-                            class="rejected-btn px-4 py-2 rounded-[8px] border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
+                            class="rejected-btn px-4 py-2 rounded-lg border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
                     </div>
 
 
                 </div>
                 <!-- 2nd part -->
 
-                <div class="absolute right-[28px] top-[1180px] md:static mt-[50px] mr-[20px]"><span class="border border-gray-400  rounded-full p-[6px]"><i
+                <div class="absolute top-5 right-4 z-20"><span class="border border-gray-400  rounded-full p-1.5"><i
                             class="fa-solid fa-trash-can delete-btn cursor-pointer"></i></span></div>
 
             </div>
 
             <!-- 3rd card  -->
             <div
-                class=" card flex justify-between rounded-[8px] shadow-lg my-[40px]  border border-gray-200 overflow-hidden  ">
+                class=" card flex justify-between rounded-lg shadow-lg my-10  border border-gray-200 overflow-hidden  relative ">
                 <!-- 1st part  -->
-                <div class="relative bg-[#FFFFFF]  space-y-5 px-[16px] w-[100%]">
-                    <h2 class="text-[18px] font-bold md:text-[24px] font-bold mt-[24px] Mobile">DataViz Solutions</h2>
+                <div class=" bg-[#FFFFFF]  space-y-5 px-4 w-full">
+                    <h2 class="text-[18px]  md:text-[24px] font-bold mt-6 Mobile">DataViz Solutions</h2>
                     <p class="text-[#64748B] React">Data Visualization Specialist</p>
                     <p class=" sm: text-[12px] md:text-[#64748B] Remote">Boston, MA
                         •
                         Full-time
                         •
                         $125,000 - $165,000</p>
-                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-[12px] uppercase
-                    py-[8px] w-[120px] text-center rounded-[4px]">Not Applied</p>
+                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-3 uppercase
+                    py-2 w-[120px] text-center rounded-sm">Not Applied</p>
                     <p class=" notes text-[13px]  md:text-[16px] ">Transform complex data into compelling visualizations. Required skills: D3.js,
                         React, and strong analytical thinking.
                     </p>
 
                     <div class="sm:m-1 py-5 md:m-8 flex flex-row gap-3">
                         <button
-                            class="interview-btn px-4 py-2 rounded-[8px] border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
+                            class="interview-btn px-4 py-2 rounded-lg border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
                         <button
-                            class="rejected-btn px-4 py-2 rounded-[8px] border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
+                            class="rejected-btn px-4 py-2 rounded-lg border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
                     </div>
 
 
                 </div>
                 <!-- 2nd part -->
 
-                <div class=" absolute right-[28px] top-[1600px] md:static mt-[50px] mr-[20px]"><span class="border border-gray-400  rounded-full p-[6px]"><i
+                <div class=" absolute top-5 right-4 z-20"><span class="border border-gray-400  rounded-full p-1.5"><i
                             class="fa-solid fa-trash-can delete-btn cursor-pointer"></i></span></div>
 
             </div>
             <!-- 4th card -->
 
             <div
-                class=" card flex justify-between rounded-[8px] shadow-lg my-[40px]  border border-gray-200 overflow-hidden  ">
+                class=" card flex justify-between rounded-lg shadow-lg my-10  border border-gray-200 overflow-hidden  relative ">
                 <!-- 1st part  -->
-                <div class=" relative bg-[#FFFFFF]  space-y-5 px-[16px] w-[100%]">
-                    <h2 class="text-[18px] font-bold md:text-[24px] font-bold mt-[24px] Mobile">CloudFirst Inc</h2>
+                <div class="  bg-[#FFFFFF]  space-y-5 px-4 w-full">
+                    <h2 class="text-[18px]  md:text-[24px] font-bold mt-6 Mobile">CloudFirst Inc</h2>
                     <p class="text-[#64748B] React">Backend Developer</p>
                     <p class="sm: text-[12px] md:text-[#64748B] Remote">Seattle, WA
                         •
                         Full-time
                         •
                         $140,000 - $190,000</p>
-                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-[12px] uppercase
-                    py-[8px] w-[120px] text-center rounded-[4px]">Not Applied</p>
+                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-3 uppercase
+                    py-2 w-[120px] text-center rounded-sm">Not Applied</p>
                     <p class="notes text-[13px]  md:text-[16px]">Design and maintain scalable backend systems using Python and AWS. Work with modern
                         DevOps practices and cloud infrastructure.</p>
 
                     <div class="sm:m-1 py-5 md:m-8 flex flex-row gap-3">
                         <button
-                            class="interview-btn px-4 py-2 rounded-[8px] border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
+                            class="interview-btn px-4 py-2 rounded-lg border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
                         <button
-                            class="rejected-btn px-4 py-2 rounded-[8px] border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
+                            class="rejected-btn px-4 py-2 rounded-lg border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
                     </div>
 
 
                 </div>
                 <!-- 2nd part -->
 
-                <div class="absolute right-[28px] top-[2020px] md:static mt-[50px] mr-[20px]"><span class="border border-gray-400  rounded-full p-[6px]"><i
+                <div class=" absolute top-5 right-4 z-20"><span class="border border-gray-400  rounded-full p-1.5"><i
                             class="fa-solid fa-trash-can delete-btn cursor-pointer"></i></span></div>
 
             </div>
             <!-- 5th card -->
             <div
-                class="overflow-hidden card flex justify-between rounded-[8px] shadow-lg my-[40px]  border border-gray-200  ">
+                class="overflow-hidden card flex justify-between rounded-lg shadow-lg my-10  border border-gray-200  relative ">
                 <!-- 1st part  -->
-                <div class=" relative bg-[#FFFFFF]  space-y-5 px-[16px] w-[100%]">
-                    <h2 class=" text-[18px] font-bold md:text-[24px] font-bold mt-[24px] Mobile">Innovation Labs</h2>
+                <div class=" bg-[#FFFFFF]  space-y-5 px-4 w-full">
+                    <h2 class=" text-[18px] font-bold md:text-[24px] mt-6 Mobile">Innovation Labs</h2>
                     <p class="text-[#64748B] React">UI/UX Engineer</p>
                     <p class=" sm: text-[12px] md:text-[#64748B] Remote">
                         Austin, TX
@@ -229,120 +229,121 @@
                         Full-time
                         •
                         $110,000 - $150,000</p>
-                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-[12px] uppercase
-                    py-[8px] w-[120px] text-center rounded-[4px]">Not Applied</p>
+                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-3 uppercase
+                    py-2 w-[120px] text-center rounded-sm">Not Applied</p>
                     <p class="notes text-[13px]  md:text-[16px]">Create beautiful and functional user interfaces for our suite of products. Strong
                         design skills and frontend development expertise required.</p>
 
                     <div class=" sm:m-1 py-5 md:m-8 flex flex-row gap-3">
                         <button
-                            class="interview-btn px-4 py-2 rounded-[8px] border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
+                            class="interview-btn px-4 py-2  border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
                         <button
-                            class="rejected-btn px-4 py-2 rounded-[8px] border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
+                            class="rejected-btn px-4 py-2  border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
                     </div>
 
 
                 </div>
                 <!-- 2nd part -->
 
-                <div class=" absolute right-[28px] top-[2460px] md:static mt-[50px] mr-[20px] "><span class="border border-gray-400  rounded-full p-[6px]"><i
+                <div class="absolute top-5 right-4 z-20  "><span class="border border-gray-400  rounded-full p-1.5"><i
                             class="fa-solid fa-trash-can delete-btn cursor-pointer "></i></span></div>
 
             </div>
             <!-- 6th card -->
             <div
-                class="overflow-hidden card flex justify-between rounded-[8px] shadow-lg my-[40px]  border border-gray-200  ">
+                class="overflow-hidden card flex justify-between rounded-lg shadow-lg my-10  border border-gray-200  relative ">
                 <!-- 1st part  -->
-                <div class=" relative bg-[#FFFFFF]  space-y-5 px-[16px] w-[100%]">
-                    <h2 class=" text-[18px] font-bold md:text-[24px] font-bold mt-[24px]  Mobile ">MegaCorp Solutions</h2>
+                <div class=" bg-[#FFFFFF]  space-y-5 px-4 w-full">
+                    <h2 class=" text-[18px] font-bold md:text-[24px]  mt-6  Mobile ">MegaCorp Solutions</h2>
                     <p class="text-[#64748B] React "> JavaScript Developer </p>
                     <p class="sm: text-[12px] md:text-[#64748B] Remote">0New York, NY
                         •
                         Full-time
                         •
                         $130,000 - $170,0</p>
-                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-[12px] uppercase
-                    py-[8px] w-[120px] text-center rounded-[4px]">Not Applied</p>
+                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-3 uppercase
+                    py-2 w-[120px] text-center rounded-sm">Not Applied</p>
                     <p class="notes text-[13px]  md:text-[16px]">Build enterprise applications with JavaScript and modern frameworks. We offer
                         competitive compensation, health insurance, and professional development opportunities.</p>
                     <!--  -->
                     <div class=" sm:m-0 py-5 md:m-8 flex flex-row gap-3">
                         <button
-                            class="interview-btn px-4 py-2 rounded-[8px] border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
+                            class="interview-btn px-4 py-2 rounded-lg border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
                         <button
-                            class="rejected-btn px-4 py-2 rounded-[8px] border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
+                            class="rejected-btn px-4 py-2 rounded-lg border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
                     </div>
 
 
                 </div>
                 <!-- 2nd part -->
 
-                <div class="absolute right-[30px] top-[2880px] z-10 md:static mt-[50px] mr-[20px]"><span class="border border-gray-400  rounded-full p-[6px]"><i
+                <div class="absolute top-5 right-4 z-20"><span class="border border-gray-400  rounded-full p-1.5"><i
                             class="fa-solid fa-trash-can delete-btn cursor-pointer"></i></span></div>
 
             </div>
             <!-- 7th card -->
             <div
-                class="overflow-hidden w-[100%] card flex justify-between rounded-[8px] shadow-lg my-[40px]  border border-gray-200  ">
+                class="overflow-hidden w-full card flex justify-between rounded-lg shadow-lg my-10  border border-gray-200  relative ">
                 <!-- 1st part  -->
-                <div class=" relative bg-[#FFFFFF]  space-y-5 px-[16px] w-[100%]">
-                    <h2 class="text-[18px] font-bold md:text-[24px] font-bold mt-[24px] Mobile">StartupXYZ</h2>
+                <div class="  bg-[#FFFFFF]  space-y-5 px-4 w-full">
+                    <h2 class="text-[18px] font-bold md:text-[24px]  mt-6 Mobile">StartupXYZ</h2>
                     <p class="text-[#64748B] React">Full Stack Engineer</p>
                     <p class="sm: text-[12px] md:text-[#64748B] Remote">San Francisco, CA
                         •
                         Full-time
                         •
                         $130,000 - $175,00</p>
-                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-[12px] uppercase
-                    py-[8px] w-[120px] text-center rounded-[4px] ">Not Applied</p>
+                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-3 uppercase
+                    py-2 w-[120px] text-center rounded-sm ">Not Applied</p>
                     <p class="notes text-[13px]  md:text-[16px]">Join our fast-growing startup and work on our core platform. Experience with
                         Node.js and React required. Great benefits and equity package included.</p>
 
                     <div class=" sm:m-1 py-5 md:m-8 flex flex-row gap-3">
                         <button
-                            class="interview-btn px-4 py-2 rounded-[8px] border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
+                            class="interview-btn px-4 py-2 rounded-lg border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
                         <button
-                            class="rejected-btn px-4 py-2 rounded-[8px] border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
+                            class="rejected-btn px-4 py-2 rounded-lg border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
                     </div>
 
 
                 </div>
                 <!-- 2nd part -->
 
-                <div class=" absolute right-[30px] top-[3340px] z-10 md:static mt-[50px] mr-[20px]"><span class="border border-gray-400  rounded-full p-[6px]"><i
+                <div class=" absolute top-5 right-4 z-20"><span class="border border-gray-400  rounded-full p-1.5"><i
+
                             class="fa-solid fa-trash-can delete-btn cursor-pointer"></i></span></div>
 
             </div>
             <!-- 8th card -->
             <div
-                class="overflow-hidden card flex justify-between rounded-[8px] shadow-lg my-[40px]  border border-gray-200  ">
+                class="overflow-hidden card relative flex justify-between rounded-lg shadow-lg my-10  border border-gray-200  ">
                 <!-- 1st part  -->
-                <div class=" relative bg-[#FFFFFF]  space-y-5 px-[16px] w-[100%]">
-                    <h2 class=" text-[18px] font-bold md:text-[24px] font-bold mt-[24px] Mobile ">TechCorp Industries</h2>
+                <div class="  bg-[#FFFFFF]  space-y-5 px-4 w-full">
+                    <h2 class=" text-[18px] font-bold md:text-[24px]  mt-6 Mobile ">TechCorp Industries</h2>
                     <p class="text-[#64748B] React ">Senior Frontend Developer</p>
                     <p class=" sm: text-[12px] md:text-[#64748B] Remote ">San Francisco, CA
                         •
                         Full-time
                         •
                         $130,000 - $175,000</p>
-                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-[12px] uppercase
-                    py-[8px] w-[120px] text-center rounded-[4px]">Not Applied</p>
+                    <p class="status font-medium text-[14px] bg-[#EEF4FF] px-3 uppercase
+                    py-2 w-[120px] text-center rounded-sm">Not Applied</p>
                     <p class="notes">We are looking for an experienced Frontend Developer to build scalable web
                         applications using React and TypeScript. You will work with a talented team on cutting-edge
                         projects.</p>
 
                     <div class=" sm:m-1 py-5 md:m-8 flex flex-row gap-3">
                         <button
-                            class="interview-btn px-4 py-2 rounded-[8px] border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
+                            class="interview-btn px-4 py-2 rounded-lg border border-green-500 text-green-500 uppercase font-semibold ">interview</button>
                         <button
-                            class="rejected-btn px-4 py-2 rounded-[8px] border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
+                            class="rejected-btn px-4 py-2 rounded-lg  border border-red-400 text-red-500 uppercase font-semibold">Rejected</button>
                     </div>
 
 
                 </div>
                 <!-- 2nd part -->
 
-                <div class=" absolute right-[30px] top-[3790px] z-10 md:static  mt-[50px] mr-[20px]"><span class="border border-gray-400  rounded-full p-[6px]"><i
+                <div class=" absolute top-5 right-4 z-20"><span class="border border-gray-400  rounded-full p-1.5"><i
                             class="fa-solid fa-trash-can delete-btn cursor-pointer"></i></span></div>
 
             </div>
